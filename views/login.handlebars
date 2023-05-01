@@ -1,40 +1,90 @@
-<div class="row justify-space-between-md">
-  <div class="login-card">
-    <h2 class="page-title">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <label for="email-login">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-login">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">login</button>
-      </div>
-    </form>
-  </div>
-  <div class="login-card">
-    <h2 class="page-title">Signup</h2>
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="username-signup">Username:</label>
-        <input class="form-input" type="text" id="username-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">Email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">Password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-  </div>
-</div>
+<link rel="stylesheet" href="/css/login.css">
 
-<script src="./js/login.js"></script>
+<header>
+  <nav>
+    <a href="/">
+      <img src="/assets/logo-main.png" alt="" class="logo">
+    </a>
+    <a href="/login">
+      <i class="fa-regular fa-user icon"></i>
+    </a>
+  </nav>
+</header>
+
+<section class="wrapper hero-section">
+  <div class="title-section">
+    <img src="/assets/spendrlogo.png" alt="">
+    <h2>Welcome to Spendr</h2>
+    <p>
+      Your personal budget tracker that helps you take control of your spending and achieve your financial goals.
+    </p>
+  </div>
+  <div class="button-group">
+    <button class="btn btn-filled register-button">Create an account</button>
+    <p>Already have an account?</p>
+    <button class="btn signin-button">Sign In</button>
+  </div>
+</section>
+
+<section class="wrapper register-section hidden">
+  <h2>Create an account</h2>
+  <form id="registerForm" class="register-form">
+    <p class="registerError error"></p>
+    <div class="input-group">
+      <input type="text" name="firstName" placeholder="First Name">
+      <input type="text" name="lastName" placeholder="Last Name">
+    </div>
+    <div class="input-group">
+      <input type="email" name="email" placeholder="Email">
+    </div>
+    <div class="input-group">
+      <input type="text" name="phone" placeholder="Phone">
+    </div>
+    <div class="input-group">
+      <input type="password" name="password" placeholder="Password">
+    </div>
+    <button type="submit" class="submit-btn btn btn-filled">Get Started</button>
+  </form>
+  <div class="mt-sm">
+    <p class="divider">Already have an account?</p>
+    <button class="btn signin-button">Sign In</button>
+  </div>
+</section>
+
+<section class="wrapper signin-section hidden">
+  <h2 class="page-title">Sign In</h2>
+  <p class="page-tagline">Sign in to your account to easily manage your finances</p>
+  <form class="login-form" id="signInForm">
+    <p class="loginError error"></p>
+    <div class="input-group">
+      <input type="text" name="email" placeholder="Email" required>
+    </div>
+    <div class="input-group">
+      <input type="password" name="password" placeholder="Password" required>
+    </div>
+    <button type="submit" class="submit-btn btn btn-filled">Sign In</button>
+  </form>
+  <div class="mt-sm">
+    <button class="btn btn-plain forgot-button">Forgot your password?</button>
+  </div>
+  <div class="mt-lg">
+    <p class="divider">New to Spendr?</p>
+    <button class="btn register-button">Create account</button>
+  </div>
+</section>
+
+<section class="wrapper forgot-section hidden">
+  <h2 class="page-title">Get help signing into your account</h2>
+  <div class="page-tagline">Please enter your email address</div>
+  <form action="/forgotpassword" method="get" class="login-form">
+    <div class="input-group">
+      <input type="email" name="email" placeholder="email">
+    </div>
+    <button class="btn submit-btn btn-filled">Submit</button>
+  </form>
+  <div class="mt-sm">
+    <button class="hero-button btn">Back</button>
+  </div>
+</section>
+
+<script src="/js/login.js"></script>
