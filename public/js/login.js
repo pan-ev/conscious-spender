@@ -1,51 +1,34 @@
-const loginFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const email = document.querySelector('#email-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
-  
-    if (email && password) {
-      const response = await fetch('/api/users/login', {
-        method: 'POST',
-        body: JSON.stringify({ email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Failed to log in.');
-      }
-    }
-  };
-  
-  const signupFormHandler = async (event) => {
-    event.preventDefault();
-  
-    const username = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-  
-    if (username && email && password) {
-      const response = await fetch('/api/users', {
-        method: 'POST',
-        body: JSON.stringify({ username, email, password }),
-        headers: { 'Content-Type': 'application/json' },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert('Failed to sign up.');
-      }
-    }
-  };
-  
-  document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
-  
-  document
-    .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
+function main()  {
+  //buttons
+
+  const signInButtons = document.querySelectorAll(".signin-button");
+  const registerButtons = document.querySelectorAll(".register-button");
+  const forgotButtons = document.querySelectorAll(".forgot-button");
+  const heroButtons = document.querySelectorAll(".hero-button");
+
+  //sections
+  const heroSection = document.querySelector(".hero-section");
+  const signInSection = document.querySelector(".signin-section");
+  const registerSection = document.querySelector(".register-section");
+  const forgotSection = document.querySelector(".forgot-section");
+
+  //forms
+  const signInForm = document.querySelector("#signInForm");
+  const registerForm = document.querySelector("#registerfrom");
+
+  // error divs
+  const loginError = document.querySelector(".loginError");
+  const registerError = document.querySelector(".registerError")
+
+
+async function handleLoginSubmit(event) {
+  event.preventDefault();
+  const reqBody = {
+    email: event.target.querySelector("input")
+  }
+}
+
+
+
+    
   
