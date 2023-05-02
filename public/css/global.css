@@ -1,0 +1,30 @@
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+   }
+   
+   button {
+     cursor: pointer;
+     font-family: "Poppins", sans-serif;
+     font-size: 16px;
+   }
+   
+   input {
+     font-family: "Poppins", sans-serif;
+   }
+   
+   body {
+     font-family: "Poppins", sans-serif;
+   }
+   
+   .container {
+     max-width: 1200px;
+     margin: 0 auto;
+   }
+   
+   .icon {
+     font-size: 22px;
+     color: black;
+   }
+   
