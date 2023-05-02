@@ -16,6 +16,13 @@ Transaction.init(
       type: DataTypes.DECIMAL,
       allowNull: false,
     },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "category",
+        key: "id"
+      }
+    },
     transaction_date: {
       type: DataTypes.DATE,
       allowNull: false,
@@ -26,7 +33,7 @@ Transaction.init(
     vendor_name: {
       type: DataTypes.STRING,
     },
-    transaction_descrioption: {
+    transaction_description: {
       type: DataTypes.STRING,
     },
     user_id: {
