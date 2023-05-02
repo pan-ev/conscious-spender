@@ -1,0 +1,135 @@
+/*Header styles*/
+.logo {
+     max-width: 120px;
+   }
+   header {
+     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+   }
+
+   header nav {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding:10px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+
+   .mt-sm {
+     margin-top: 20px;
+   }
+
+   .mt-lg {
+     margin-top: 40px;
+   }
+
+   /*main styles*/
+
+   .title-section h2 {
+     font-size: 32px;
+     margin: 30px 0 10px;
+   }
+
+   .title-section p {
+     max-width: 500px;
+     margin: 0 auto;
+   }
+
+   .title-section img {
+     max-width: 120px;
+     width: 100%;
+   }
+
+   .btn {
+     max-width: 300px;
+     width: 100%;
+     border-radius: 999px;
+     border: none;
+     outline: none;
+     padding: 8px 0;
+     border: 1px solid #1f3e75;
+     color: #1f3e75;
+     background-color: white;
+   }
+
+   .btn-plain {
+     border: none;
+   }
+
+   .wrapper {
+     max-width: 900px;
+     margin:50px auto 0;
+     text-align: center;
+   }
+
+   .button-group {
+     margin-top: 40px;
+
+   }
+
+   .button-group p {
+     margin: 20px 0 10px;
+     color: #333;
+     font-size: 14px;
+
+   }
+
+
+   /*Register form styles*/
+   .register-section h2 {
+     font-size: 32px;
+     text-align: center;
+   }
+   
+   .register-form,
+   .login-form {
+     max-width: 500px;
+     margin: 20px auto 0;
+   }
+   
+   .input-group {
+     display: flex;
+     gap: 10px;
+   }
+   
+   .input-group input {
+     border: 1px solid lightgray;
+     outline: none;
+     border-radius: 5px;
+     background: white;
+     padding: 12px 8px;
+     width: 100%;
+     margin-top: 10px;
+   }
+   
+   .submit-btn {
+     margin-top: 40px;
+   }
+   
+   .divider {
+     margin-bottom: 5px;
+   }
+   
+   .page-tagline {
+     font-size: 15px;
+     margin-top: 10px;
+     color: gray;
+   }
+   
+   a.btn {
+     display: inline-block;
+     max-width: 150px;
+     text-decoration: none;
+   }
+   
+   .hidden {
+     display: none;
+   }
+   
+   .error {
+     border-radius: 10px;
+     text-align: center;
+     color: red;
+     background: pink;
+   }
+
