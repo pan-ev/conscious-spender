@@ -83,7 +83,60 @@ async function handleRegisterSubmit(event) {
 registerForm.addEventListener("submit", handleRegisterSubmit);
 signInForm.addEventListener("submit", handleLoginSubmit);
 
+//remove the 'hidden' class from the element
+const showSection = (container) => {
+  container.classList.remove("hidden");
+};
 
+//adds the 'hidden' class to the element
+const hideSection = (container) => {
+  container.classList.add("hidden");
+};
+
+//check if the buttons exist and then loop through all of the buttons
+//add an event listener to hide/show sections to each button
+
+signInButtons.forEach((e) => {
+  e.addEventListener("click", () => {
+    hideSection(heroSection);
+    hideSection(registerSection);
+    hideSection(forgotSection);
+    showSection(signInSection);
+  });
+});
+
+registerButtons &&
+  registerButtons.forEach((s) => {
+    e.addEventListener("click", () => {
+      hideSection(heroSection);
+      hideSection(signInSection);
+      hideSection(forgotSection);
+      showSection(registerSection);
+    });
+  });
+
+  forgotButtons &&
+    forgotButtons.forEach ((e) => {
+      e.addEventListener("click", () => {
+        hideSection(heroSection);
+        hideSection(signInSection);
+        hideSection(registerSection);
+        showSection(forgotSection);
+      });
+    });
+
+    heroButtons &&
+    heroButtons.forEach((e) => {
+      e.addEventListener("click", () => {
+        hideSection(signInSection);
+        hideSection(registerSection);
+        hideSection(forgotSection);
+        showSection(heroSection);
+      });
+    });
+  }
+
+  window.addEventListener("DOMContentLoaded", main);
 
 
 
