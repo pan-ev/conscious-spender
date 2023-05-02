@@ -31,5 +31,24 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/transactions/", withAuth, async (req, res) => {
+  try {
+    const transactionsData = await Transaction.findAll({
+      where: {
+        user_id: req.params.userId
+      }
+    });
+
+    const transactions = transactionsData.map(transaction => transaction.get({ plain: true }));
+
+    res.render("transactions", {
+      transactions,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
 
