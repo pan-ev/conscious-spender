@@ -41,7 +41,7 @@ router.get("/transactions/", withAuth, async (req, res) => {
 
     const transactions = transactionsData.map(transaction => transaction.get({ plain: true }));
 
-    res.render("transactions", {
+    res.render("transaction", {
       transactions,
       logged_in: req.session.logged_in
     });
