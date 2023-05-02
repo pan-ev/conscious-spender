@@ -1,5 +1,3 @@
-DROP DATABASE IF EXISTS transaction_db;
-CREATE DATABASE transaction_db;
-
-DROP DATABASE IF EXISTS user_db;
-CREATE DATABASE user_db;
+DROP DATABASE IF EXISTS spendr_db;
+CREATE DATABASE spendr_db;
+USE spendr_db;
