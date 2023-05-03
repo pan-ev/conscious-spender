@@ -27,4 +27,33 @@
      font-size: 22px;
      color: black;
    }
-   
+   a.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .btn {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    border: 1px solid #1f3e75;
+    color: #1f3e75;
+    background-color: white;
+  }
+  
+  .btn-filled {
+    color: white;
+    background: linear-gradient(to top, #1f3e75, #2a5096);
+  }
+  
+  .btn-plain {
+    border: none;
+  }
+  
+  .submit-btn {
+    margin-top: 40px;
+  }
