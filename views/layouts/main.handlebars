@@ -1,22 +1,70 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Spendr</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" type="text/css" href="/css/global.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" type="text/css" href="/css/global.css" />
+  <link rel="stylesheet" type="text/css" href="/css/dashboard.css" />
 </head>
 
-
 <body>
-  <main>
+  <main class="main">
+    <aside class="sidebar">
+      <nav class="nav">
+        <div>
+          <img src="/assets/logo-main.png" alt="" />
+        </div>
+        <div class="name">
+          <h2>Hello {{getFullName user}}</h2>
+          <a href="/profile">Profile</a>
+        </div>
+        <ul class="nav-ul">
+          <li class="nav-li">
+            <a href="/" class="nav-item">
+              <i class="fa-solid fa-table-columns icon"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-li">
+            <a href="/transactions" class="nav-item">
+              <i class="fa-solid fa-arrow-right-arrow-left icon"></i>
+              <span>Transactions</span>
+            </a>
+          </li>
+          <li class="nav-li">
+            <a href="/spending-by-category" class="nav-item">
+              <i class="fa-solid fa-chart-pie icon"></i>
+              <span>Spending by Category</span>
+            </a>
+          </li>
+          <li class="nav-li">
+            <a href="/spending-by-date" class="nav-item">
+              <i class="fa-solid fa-chart-line icon"></i>
+              <span>Spending by Date</span>
+            </a>
+          </li>
+        </ul>
+        <div class="logout-container">
+          <a href="/logout" class="nav-item">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <span>Logout</span>
+          </a>
+        </div>
+      </nav>
+    </aside>
+    <div class="content">
       {{{body}}}
+    </div>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>
