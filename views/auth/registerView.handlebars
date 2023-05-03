@@ -1,0 +1,33 @@
+<section class="wrapper register-section">
+  <h2>Create an account</h2>
+  <form
+    id="registerForm"
+    class="register-form"
+    action="/auth/register"
+    method="POST"
+  >
+    <p class="registerError error">
+      {{#if error}}
+        {{error}}
+      {{/if}}
+    </p>
+    <div class="input-group">
+      <input type="text" name="firstName" placeholder="First Name" />
+      <input type="text" name="lastName" placeholder="Last Name" />
+    </div>
+    <div class="input-group">
+      <input type="email" name="email" placeholder="Email" />
+    </div>
+    <div class="input-group">
+      <input type="text" name="phone" placeholder="Phone" />
+    </div>
+    <div class="input-group">
+      <input type="password" name="password" placeholder="Password" />
+    </div>
+    <button type="submit" class="submit-btn btn btn-filled">Get Started</button>
+  </form>
+  <div class="mt-sm">
+    <p class="divider">Already have an account?</p>
+    <a class="btn signin-button" href="/auth/login">Sign In</a>
+  </div>
+</section>

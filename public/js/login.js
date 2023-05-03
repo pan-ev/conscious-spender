@@ -19,7 +19,6 @@ function main()  {
   const loginError = document.querySelector(".loginError");
   const registerError = document.querySelector(".registerError");
 
-
   // login function
 async function handleLoginSubmit(event) {
   event.preventDefault();

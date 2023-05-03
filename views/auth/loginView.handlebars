@@ -1,0 +1,31 @@
+<section class="wrapper signin-section">
+  <h2 class="page-title">Sign In</h2>
+  <p class="page-tagline">Sign in to your account to easily manage your finances</p>
+  <form class="login-form" id="signInForm" action="/auth/login" method="POST">
+    <p class="loginError error">
+      {{#if error}}
+        {{error}}
+      {{/if}}
+    </p>
+    <p class="loginMessage message">
+      {{#if message}}
+        {{message}}
+      {{/if}}
+    </p>
+    <div class="input-group">
+      <input type="text" name="email" placeholder="Email" required />
+    </div>
+    <div class="input-group">
+      <input type="password" name="password" placeholder="Password" required />
+    </div>
+    <button type="submit" class="submit-btn btn btn-filled">Sign In</button>
+  </form>
+  <div class="mt-sm">
+    <a class="btn btn-plain forgot-button" href="/auth/forgot-password">Forgot
+      your password?</a>
+  </div>
+  <div class="mt-lg">
+    <p class="divider">New to Spendr?</p>
+    <a class="btn register-button" href="/auth/register">Create account</a>
+  </div>
+</section>
