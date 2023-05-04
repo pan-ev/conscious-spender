@@ -19,14 +19,54 @@
       Your personal budget tracker that helps you take control of your spending and achieve your financial goals.
     </p>
   </div>
-  <div class="button-group">
+  {{!-- <div class="button-group">
     <button class="btn btn-filled register-button">Create an account</button>
     <p>Already have an account?</p>
     <button class="btn signin-button">Sign In</button>
-  </div>
+  </div> --}}
 </section>
+<div class="row justify-space-between-md">
+  <div class="login-card">
+    <h2 class="page-title">Login</h2>
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">Email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+  <div class="login-card">
+    <h2 class="page-title">Signup</h2>
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="username-signup">Username:</label>
+        <input class="form-input" type="text" id="username-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">Email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">Password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+</div>
 
-<section class="wrapper register-section hidden">
+<script src="./js/login.js"></script>
+
+{{!-- <section class="wrapper register-section hidden">
   <h2>Create an account</h2>
   <form id="registerForm" class="register-form">
     <p class="registerError error"></p>
@@ -57,12 +97,12 @@
   <form class="login-form" id="signInForm">
     <p class="loginError error"></p>
     <div class="input-group">
-      <input type="text" name="email" placeholder="Email" required>
+      <input type="text" name="email" id="email-login" placeholder="Email" required>
     </div>
     <div class="input-group">
-      <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="password" id="password-login" placeholder="Password" required>
     </div>
-    <button type="submit" class="submit-btn btn btn-filled">Sign In</button>
+    <button type="submit" class="login-btn btn btn-filled">Sign In</button>
   </form>
   <div class="mt-sm">
     <button class="btn btn-plain forgot-button">Forgot your password?</button>
@@ -87,4 +127,4 @@
   </div>
 </section>
 
-<script src="/js/login.js"></script>
+<script src="/js/login.js"></script> --}}
