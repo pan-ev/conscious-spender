@@ -10,7 +10,7 @@ router.post('/', async (req, res) => {
     const newTransaction = await Transaction.create({
       transaction_description: req.body.transaction_description,
       transaction_amount: req.body.transaction_amount,
-      category_id: req.body.category_id,
+      category: req.body.category,
       transaction_date: req.body.transaction_date,
       vendor_name: req.body.vendor_name,
       user_id: req.body.user_id
