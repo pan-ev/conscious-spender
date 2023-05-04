@@ -1,0 +1,23 @@
+<section class="section add-expense-section">
+  <h2>Add an Expense</h2>
+  <form action="/add-expense" method="POST">
+    <p class="message">
+      {{#if message}}
+        {{message}}
+      {{/if}}
+    </p>
+    <div class="input-group">
+      <input type="text" name="amount" placeholder="Amount" required />
+    </div>
+    <div class="input-group">
+      <input type="date" name="date" placeholder="Date" required />
+    </div>
+    <div class="input-group">
+      <input type="text" name="payee" placeholder="Payee" required />
+    </div>
+    <div class="input-group">
+      <input type="text" name="category" placeholder="Category" required />
+    </div>
+    <button type="submit" class="btn submit-btn btn-filled">Create</button>
+  </form>
+</section>

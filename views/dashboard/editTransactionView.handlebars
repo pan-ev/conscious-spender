@@ -1,0 +1,23 @@
+<section class="section add-expense-section">
+    <h2>Edit Expense</h2>
+    <form action="/transactions/{{expense.id}}" method="post">
+        <p class="message">
+            {{#if message}}
+            {{message}}
+            {{/if}}
+        </p>
+        <div class="input-group">
+            <input type="text" name="amount" placeholder="Amount" required value="{{expense.amount}}" />
+        </div>
+        <div class="input-group">
+            <input type="date" name="date" placeholder="Date" required value="{{expense.date}}" />
+        </div>
+        <div class="input-group">
+            <input type="text" name="payee" placeholder="Payee" required value="{{expense.payee}}" />
+        </div>
+        <div class="input-group">
+            <input type="text" name="category" placeholder="Category" required value="{{expense.category}}" />
+        </div>
+        <button type="submit" class="btn submit-btn btn-filled">Edit</button>
+    </form>
+</section>
