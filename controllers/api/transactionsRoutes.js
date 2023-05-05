@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
       category: req.body.category,
       transaction_date: req.body.transaction_date,
       vendor_name: req.body.vendor_name,
-      user_id: req.body.user_id
+      user_id: req.session.user_id
     });
 
     res.status(201).json(newTransaction);
