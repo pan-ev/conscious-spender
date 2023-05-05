@@ -1,11 +1,20 @@
 const router = require("express").Router();
 const { User } = require("../models");
 const withAuth = require("../utils/auth");
+const  Transaction  = require('../models/Transaction');
 
 // Prevent non logged in users from viewing the homepage
 router.get("/", withAuth, async (req, res) => {
   try {
-    res.render("homepage");
+    const dbTransactionsData = await Transaction.findAll({
+      where: { user_id: req.session.user_id },
+      order: [['createdAt', 'DESC']],
+    });
+    const transactions = dbTransactionsData.map((transactions) =>
+      transactions.get({ plain: true })
+    );
+    console.log(transactions);
+    res.render("homepage" ,{transactions});
   } catch (err) {
     res.status(500).json(err);
   }

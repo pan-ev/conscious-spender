@@ -15,7 +15,25 @@
 
 <section class="section transaction-section">
   <h2 class="section-title">Transaction Activity</h2>
-  <ul class="activity-ul" id="activityUL">
-  </ul>
+  
+     <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Amount</th>
+      <th scope="col">Category</th>
+      <th scope="col">Dates</th>
+    </tr>
+  </thead>
+  <tbody>
+     
+    {{#each transactions as |transaction|}}
+       {{> transaction-details}}
+      {{/each}}
+   </tbody>
+</table>
+  
   <a href="/transactions">View More Transactions</a>
 </section>
+
+<script src="/js/transaction.js"></script>
