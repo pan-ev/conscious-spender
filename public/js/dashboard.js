@@ -59,7 +59,12 @@ function createCategoryExpenseChart(data) {
                type: "pie",
                data: {
                     lables: Object.keys(parseData),
-                    database: [{ lable: "Amount", data: Object.values(parseData)}],
+                    database: [
+                         { 
+                              lable: "Amount", 
+                              data: Object.values(parseData)
+                         }
+                    ]
                },
                options: { 
                     maintainAspectRatio: false,
@@ -73,3 +78,16 @@ function createCategoryExpenseChart(data) {
            })
 
           }
+// Fetch the transactions from our API
+async function fetchTransaction() {
+     try {
+          const response = await fetch("/api/transaction");
+          const data = await response.json();
+
+          createTotalExpenseChart(data);
+          createCategoryExpenseChart(data);
+     } catch (error) {
+          console.log(error.message);
+     }
+}
+
