@@ -38,6 +38,7 @@ new Chart(totalExpenseCanvas, {
 }
 
 function createCategoryExpenseChart(data) {
+
      const parseData = {};
      data.forEach(d => {
           const category = d.category.toLowerCase()
@@ -47,3 +48,5 @@ function createCategoryExpenseChart(data) {
                     parseData[category] += Number(d.transaction_amount);
                }
            });
+
+          }
