@@ -12,4 +12,27 @@ function createTotalExpenseChart(data) {
                parseData[date] += number(d.transaction_amount);
           }
      });
+
+
+new Chart(totalExpenseCanvas, {
+     type: "bar",
+     date: {
+          lable: Object.keys(parsedData),
+          database: [
+               {
+                    lable: "Amount",
+                    data: Object.values(parsedData),
+                    borderWidth: 1,
+               }
+          ]
+     },
+     options: {
+          scales: {
+               y: {
+                    beginAtZero: true,
+               }
+          }
+     }
+  });
+
 }
