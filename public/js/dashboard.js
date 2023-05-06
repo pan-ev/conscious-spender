@@ -1,6 +1,9 @@
 const totalExpenseCanvas = document.querySelector("#totalExpenseChart");
 const categoryExpenseCanvas = document.querySelector("#categoryExpenseChart");
 
+
+
+// creates and renders total expense chart
 function createTotalExpenseChart(data) {
 
      const parsedData = {};
@@ -14,7 +17,8 @@ function createTotalExpenseChart(data) {
      });
 
 
-new Chart(totalExpenseCanvas, {
+    // create the chart using the Chart.js module
+    new Chart(totalExpenseCanvas, {
      type: "bar",
      date: {
           lable: Object.keys(parsedData),
@@ -37,6 +41,7 @@ new Chart(totalExpenseCanvas, {
 
 }
 
+// creates and renders category expense chart
 function createCategoryExpenseChart(data) {
 
      const parseData = {};
@@ -48,5 +53,23 @@ function createCategoryExpenseChart(data) {
                     parseData[category] += Number(d.transaction_amount);
                }
            });
+
+           // create the chart using the parsed data
+           new Chart(categoryExpenseCanvas, {
+               type: "pie",
+               data: {
+                    lables: Object.keys(parseData),
+                    database: [{ lable: "Amount", data: Object.values(parseData)}],
+               },
+               options: { 
+                    maintainAspectRatio: false,
+                    reponsive: true,
+                    plugin: {
+                         legend: {
+                              position: "right"
+                         },
+                    },
+               },
+           })
 
           }
