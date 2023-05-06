@@ -3,15 +3,12 @@ const categoryExpenseCanvas = document.querySelector("#categoryExpenseChart");
 
 // creates and renders total expense chart
 function createTotalExpenseChart(data) {
-     // we need to parse only 
-     // the required fields from the data
+ 
      const parsedData = {};
      data.forEach(d => {
-         // convert the transaction_date to a Date object
+       
          const date = new Date(d.transaction_date).toLocaleDateString();
-         // check if parsedData already has the date
-         // if true, add the amount to the already existing date
-         // if false, set the date in parsedDate,
+     
          if (parsedData[date] === undefined) {
              parsedData[date] = Number(d.transaction_amount);
          } else {
@@ -44,16 +41,16 @@ function createTotalExpenseChart(data) {
  
  // creates and renders category expense chart
  function createCategoryExpenseChart(data) {
-     // here, we need to create key-value pair of category-amount
+ 
      const parsedData = {};
-     // loop through the data and parse the required field
+   
      data.forEach(d => {
          const category = d.category.toLowerCase()
-         // if no already existing data in parsedData, create a new one
+        
          if (parsedData[category] === undefined) {
              parsedData[category] = Number(d.transaction_amount);
          } else {
-             // add the amount to the already existing key in parsedData
+           
              parsedData[category] += Number(d.transaction_amount);
          }
      });
@@ -81,16 +78,16 @@ function createTotalExpenseChart(data) {
  
  // Fetch the transactions from our API
  async function fetchTransactions() {
-     // using trycatch block to catch any errors
+   
      try {
          const response = await fetch("/api/transactions");
          const data = await response.json();
  
-         // create charts using the data returned from the API
+       
          createTotalExpenseChart(data);
          createCategoryExpenseChart(data);
      } catch (error) {
-         // log the error message to the console
+    
          console.log(error.message);
      }
  }
