@@ -91,3 +91,6 @@ async function fetchTransaction() {
      }
 }
 
+fetchTransaction()
+
+
