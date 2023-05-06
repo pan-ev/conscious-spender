@@ -36,3 +36,14 @@ new Chart(totalExpenseCanvas, {
   });
 
 }
+
+function createCategoryExpenseChart(data) {
+     const parseData = {};
+     data.forEach(d => {
+          const category = d.category.toLowerCase()
+               if (parseData[category] === undefined) {
+                    parseData[category] = Number(d.transaction_amount);
+               } else {
+                    parseData[category] += Number(d.transaction_amount);
+               }
+           });
