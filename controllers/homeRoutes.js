@@ -8,12 +8,11 @@ router.get("/", withAuth, async (req, res) => {
   try {
     const dbTransactionsData = await Transaction.findAll({
       where: { user_id: req.session.user_id },
-      order: [['createdAt', 'DESC']],
+      order: [['transaction_date', 'DESC']],
     });
     const transactions = dbTransactionsData.map((transactions) =>
       transactions.get({ plain: true })
     );
-    console.log(transactions);
     res.render("homepage" ,{transactions});
   } catch (err) {
     res.status(500).json(err);

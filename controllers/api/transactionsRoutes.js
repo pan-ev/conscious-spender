@@ -28,7 +28,7 @@ router.get('/',  async (req, res) => {
   try {
     const transactions = await Transaction.findAll({
       where: { user_id: req.session.user_id },
-      order: [['createdAt', 'DESC']],
+      order: [['transaction_date', 'ASC']],
     });
     res.status(200).json(transactions);
   } catch (error) {
