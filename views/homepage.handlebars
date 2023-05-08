@@ -1,3 +1,4 @@
+{{!-- Sidebar --}}
 <aside class="sidebar">
   <nav class="nav">
     <div>
@@ -45,11 +46,12 @@
 </aside>
 
 
-
+{{!-- Add Expense Button --}}
 <section class="section center-section">
   <a href="/transactions" class="btn">Add Expense</a>
 </section>
 
+{{!-- ChartJS charts - Total Expense By Month / Top Spending Categories --}}
 <section class="section expenses-section">
   <div class="total-expenses" style="height: 350px">
     <h2 class="card-title">Total Expenses By Month</h2>
@@ -61,6 +63,7 @@
   </div>
 </section>
 
+{{!-- Transaction Table --}}
 <section class="section transaction-section">
   <h2 class="section-title">Transaction Activity</h2>
   <table class="table table-striped" id="transactionTable">
@@ -79,9 +82,6 @@
       {{/each}}
     </tbody>
   </table>
-
-
-  <a href="/transactions">View More Transactions</a>
 </section>
 
 <script src="/js/transaction.js"></script>

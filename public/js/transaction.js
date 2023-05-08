@@ -1,3 +1,4 @@
+// Logic for submitting a new request
 const transactionFormHandler = async (event) => {
   event.preventDefault();
 
@@ -11,6 +12,7 @@ const transactionFormHandler = async (event) => {
     .querySelector("#inputDescription")
     .value.trim();
 
+  // Make call to api/transactions route
   if (transaction_amount && transaction_date && vendor_name && category) {
     const response = await fetch("/api/transactions", {
       method: "POST",
