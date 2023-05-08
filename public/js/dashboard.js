@@ -3,11 +3,11 @@ const categoryExpenseCanvas = document.querySelector("#categoryExpenseChart");
 const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 ];
-// creates and renders total expense chart
+
+// creates and renders total expense by month chart
 function createTotalExpenseChart(data) {
      const parsedData = {};
      data.forEach(d => {
-        
          const dateMonth = new Date(d.transaction_date).getMonth();
          const dateYear = new Date(d.transaction_date).getFullYear();
          var dateString = monthNames[dateMonth] + "-" + dateYear;
@@ -17,6 +17,7 @@ function createTotalExpenseChart(data) {
              parsedData[dateString] += Number(d.transaction_amount);
          }
      });
+
      // create the chart using the Chart.js module
      new Chart(totalExpenseCanvas, {
          type: "bar",

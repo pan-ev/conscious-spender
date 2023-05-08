@@ -11,6 +11,7 @@
   </nav>
 </header>
 
+
 <section class="wrapper hero-section">
   <div class="title-section">
     <img src="/assets/spendrlogo.png" alt="">
@@ -19,12 +20,9 @@
       Your personal budget tracker that helps you take control of your spending and achieve your financial goals.
     </p>
   </div>
-  {{!-- <div class="button-group">
-    <button class="btn btn-filled register-button">Create an account</button>
-    <p>Already have an account?</p>
-    <button class="btn signin-button">Sign In</button>
-  </div> --}}
 </section>
+
+{{!-- Login Card --}}
 <div class="row justify-space-between-md">
   <div class="login-card">
     <h2 class="page-title">Login</h2>
@@ -42,6 +40,8 @@
       </div>
     </form>
   </div>
+
+  {{!-- Signup Card --}}
   <div class="login-card">
     <h2 class="page-title">Signup</h2>
     <form class="form signup-form">
@@ -65,66 +65,3 @@
 </div>
 
 <script src="/js/login.js"></script>
-
-{{!-- <section class="wrapper register-section hidden">
-  <h2>Create an account</h2>
-  <form id="registerForm" class="register-form">
-    <p class="registerError error"></p>
-    <div class="input-group">
-      <input type="text" name="firstName" placeholder="First Name">
-      <input type="text" name="lastName" placeholder="Last Name">
-    </div>
-    <div class="input-group">
-      <input type="email" name="email" placeholder="Email">
-    </div>
-    <div class="input-group">
-      <input type="text" name="phone" placeholder="Phone">
-    </div>
-    <div class="input-group">
-      <input type="password" name="password" placeholder="Password">
-    </div>
-    <button type="submit" class="submit-btn btn btn-filled">Get Started</button>
-  </form>
-  <div class="mt-sm">
-    <p class="divider">Already have an account?</p>
-    <button class="btn signin-button">Sign In</button>
-  </div>
-</section>
-
-<section class="wrapper signin-section hidden">
-  <h2 class="page-title">Sign In</h2>
-  <p class="page-tagline">Sign in to your account to easily manage your finances</p>
-  <form class="login-form" id="signInForm">
-    <p class="loginError error"></p>
-    <div class="input-group">
-      <input type="text" name="email" id="email-login" placeholder="Email" required>
-    </div>
-    <div class="input-group">
-      <input type="password" name="password" id="password-login" placeholder="Password" required>
-    </div>
-    <button type="submit" class="login-btn btn btn-filled">Sign In</button>
-  </form>
-  <div class="mt-sm">
-    <button class="btn btn-plain forgot-button">Forgot your password?</button>
-  </div>
-  <div class="mt-lg">
-    <p class="divider">New to Spendr?</p>
-    <button class="btn register-button">Create account</button>
-  </div>
-</section>
-
-<section class="wrapper forgot-section hidden">
-  <h2 class="page-title">Get help signing into your account</h2>
-  <div class="page-tagline">Please enter your email address</div>
-  <form action="/forgotpassword" method="get" class="login-form">
-    <div class="input-group">
-      <input type="email" name="email" placeholder="email">
-    </div>
-    <button class="btn submit-btn btn-filled">Submit</button>
-  </form>
-  <div class="mt-sm">
-    <button class="hero-button btn">Back</button>
-  </div>
-</section>
-
-<script src="/js/login.js"></script> --}}
