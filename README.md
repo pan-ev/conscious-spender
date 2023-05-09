@@ -8,6 +8,7 @@ Spendr is a money-saving app that helps you keep track of your expenses and savi
 
 Spendr can help you stay on track. You can set a target amount for your savings.You can be sure that your financial information is safe and protected. You can also access your Spendr account from anywhere, whether you're at home on your computer or on the go with your mobile device. Spendr was created as a personal project by a group of developers Evan Pan,Jose Cortorreal, and Elinor Chayo who wanted to make it easier for people to save money and achieve their financial goals. We believe that everyone should have access to the tools they need to manage their finances effectively, and we hope that Spendr will help you do just that.In summary, Spendr is a powerful tool for managing your finances and achieving your savings goals. With its intuitive interface, robust features, and secure authentication, it's the perfect app for anyone looking to take control of your finances and start saving money.
 
+
 ## Table of Contents
 
 * [Technologies](#installation)
