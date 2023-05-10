@@ -143,13 +143,14 @@ a.btn {
 /*Style both login and sign up card using a same class */
 .auth-card {
   text-align: center;
+}
 
-  .auth-card {
+.auth-card {
     max-width: 500px;
     padding: 20px;
     margin: 0 auto;
     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2);
-  }
+}
   .form-group {
     display: flex;
     flex-direction: column;
