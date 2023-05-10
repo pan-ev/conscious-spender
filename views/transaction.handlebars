@@ -1,90 +1,89 @@
 {{!-- Sidebar --}}
 <main class="main-wrapper">
-<aside class="sidebar">
-  <nav class="nav">
-    <div>
-      <img src="/assets/logo-main.png" alt="" />
-    </div>
-    <div class="sidebar-name">
+  <aside class="sidebar">
+    <nav class="nav">
+      <div>
+        <img src="/assets/logo-main.png" alt="" />
+      </div>
+      <div class="sidebar-name">
         <p>Welcome</p>
         <h2>{{user.username}}</h2>
       </div>
-    <ul class="nav-ul">
-      <li class="nav-li">
-        <a href="/" class="nav-item">
-          <i class="fa-solid fa-table-columns icon"></i>
-          <span>Profile</span>
+      <ul class="nav-ul">
+        <li class="nav-li">
+          <a href="/" class="nav-item">
+            <i class="fa-solid fa-table-columns icon"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li class="nav-li">
+          <a href="/" class="nav-item">
+            <i class="fa-solid fa-table-columns icon"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-li">
+          <a href="/transactions" class="nav-item">
+            <i class="fa-solid fa-arrow-right-arrow-left icon"></i>
+            <span>Transactions</span>
+          </a>
+        </li>
+        <li class="nav-li">
+          <a href="/spending-by-category" class="nav-item">
+            <i class="fa-solid fa-chart-pie icon"></i>
+            <span>Spending by Category</span>
+          </a>
+        </li>
+        <li class="nav-li">
+          <a href="/spending-by-date" class="nav-item">
+            <i class="fa-solid fa-chart-line icon"></i>
+            <span>Spending by Date</span>
+          </a>
+        </li>
+      </ul>
+      <div class="logout-container" id="logout">
+        <a href="" class="nav-item">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          <span>Logout</span>
         </a>
-      </li>
-      <li class="nav-li">
-        <a href="/" class="nav-item">
-          <i class="fa-solid fa-table-columns icon"></i>
-          <span>Dashboard</span>
-        </a>
-      </li>
-      <li class="nav-li">
-        <a href="/transactions" class="nav-item">
-          <i class="fa-solid fa-arrow-right-arrow-left icon"></i>
-          <span>Transactions</span>
-        </a>
-      </li>
-      <li class="nav-li">
-        <a href="/spending-by-category" class="nav-item">
-          <i class="fa-solid fa-chart-pie icon"></i>
-          <span>Spending by Category</span>
-        </a>
-      </li>
-      <li class="nav-li">
-        <a href="/spending-by-date" class="nav-item">
-          <i class="fa-solid fa-chart-line icon"></i>
-          <span>Spending by Date</span>
-        </a>
-      </li>
-    </ul>
-    <div class="logout-container" id="logout">
-      <a href="" class="nav-item">
-        <i class="fa-solid fa-arrow-right-to-bracket"></i>
-        <span>Logout</span>
-      </a>
-    </div>
-  </nav>
-</aside>
+      </div>
+    </nav>
+  </aside>
 
   <div class="main-content">
-
-{{!-- Add Expense Form --}}
-<section class="section add-expense-section">
-  <h2>Add an Expense</h2>
-  <form class="transaction-form">
-    <div class="input-group">
-      <input id="inputAmount" type="text" name="amount" placeholder="Amount" required />
-    </div>
-    <div class="input-group">
-      <input id="inputDate" type="date" name="date" placeholder="Date" required />
-    </div>
-    <div class="input-group">
-      <input id="inputPayee" type="text" name="payee" placeholder="Payee" required />
-    </div>
-    <div class="form-group col-auto">
-      <label class="mr-sm-2" for="inlineFormCustomSelect"></label>
-      <select id="inputCategory" class="form-control">
-        <option selected>Select Category...</option>
-        <option>Food and Dining</option>
-        <option>Health and Fitness</option>
-        <option>Entertainment</option>
-        <option>Shopping</option>
-        <option>Personal Care</option>
-        <option>Transportation</option>
-        <option>Rent</option>
-        <option>Miscellaneous</option>
-      </select>
-    </div>
-    <div class="input-group">
-      <input id="inputDescription" type="text" name="description" placeholder="Description" />
-    </div>
-    <button type="submit" class="btn submit-btn btn-filled" id="createTransactionBtn">Submit</button>
-  </form>
-</section>
+    {{!-- Add Expense Form --}}
+    <section class="section add-expense-section">
+      <h2>Add an Expense</h2>
+      <form class="transaction-form">
+        <div class="input-group">
+          <input id="inputAmount" type="text" name="amount" placeholder="Amount" required />
+        </div>
+        <div class="input-group">
+          <input id="inputDate" type="date" name="date" placeholder="Date" required />
+        </div>
+        <div class="input-group">
+          <input id="inputPayee" type="text" name="payee" placeholder="Payee" required />
+        </div>
+        <div class="form-group col-auto">
+          <label class="mr-sm-2" for="inlineFormCustomSelect"></label>
+          <select id="inputCategory" class="form-control">
+            <option selected>Select Category...</option>
+            <option>Food and Dining</option>
+            <option>Health and Fitness</option>
+            <option>Entertainment</option>
+            <option>Shopping</option>
+            <option>Personal Care</option>
+            <option>Transportation</option>
+            <option>Rent</option>
+            <option>Miscellaneous</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <input id="inputDescription" type="text" name="description" placeholder="Description" />
+        </div>
+        <button type="submit" class="btn submit-btn btn-filled" id="createTransactionBtn">Submit</button>
+      </form>
+    </section>
   </div>
 </main>
 
