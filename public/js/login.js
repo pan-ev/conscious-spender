@@ -46,6 +46,19 @@ const signupFormHandler = async (event) => {
   }
 };
 
+// show the login card and hide other cards 
+function showLoginCard() {
+  document.querySelector(".login-card").style.display = "block";
+  document.querySelector(".hero-section").style.display = "none";
+  document.querySelector(".signup-card").style.display = "none";
+}
+
+function showSignUpCard() {
+  document.querySelector(".login-card").style.display = "none";
+  document.querySelector(".hero-section").style.display = "none";
+  document.querySelector(".signup-card").style.display = "block";
+}
+
 // Set event listeners for Login and Signup buttons
 document
   .querySelector('.login-form')
@@ -54,3 +67,8 @@ document
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+// add event listeners for the auth buttons on the homepage
+// to show/hide the cards
+document.querySelectorAll(".login-btn").forEach(btn => btn.addEventListener("click", showLoginCard));
+document.querySelectorAll(".signup-btn").forEach(btn => btn.addEventListener("click", showSignUpCard));

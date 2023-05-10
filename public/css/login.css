@@ -104,7 +104,7 @@ header nav {
 }
 
 .divider {
-  margin-bottom: 5px;
+  margin: 10px 0;
 }
 
 .page-tagline {
@@ -141,11 +141,12 @@ a.btn {
   justify-content: space-between;
 }
 
-.login-card {
+/*Style both login and sign up card using a same class */
+.auth-card {
   text-align: center;
 }
 
-.form {
+.auth-card {
   max-width: 500px;
   padding: 20px;
   margin: 0 auto;
@@ -173,3 +174,27 @@ a.btn {
   align-self: center;
 }
 
+.auth-card {
+  margin-top: 20px;
+}
+
+.auth-card h2 {
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-filled {
+  background: #1f3e75;
+  color: white;
+}
+
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}

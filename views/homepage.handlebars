@@ -1,88 +1,97 @@
-{{!-- Sidebar --}}
-<aside class="sidebar">
-  <nav class="nav">
-    <div>
-      <img src="/assets/logo-main.png" alt="" />
-    </div>
-    <ul class="nav-ul">
-      <li class="nav-li">
-        <a href="/" class="nav-item">
-          <i class="fa-solid fa-table-columns icon"></i>
-          <span>Profile</span>
+<main class="main-wrapper">
+  {{!-- Sidebar --}}
+  <aside class="sidebar">
+    <nav class="nav">
+      <div>
+        <img src="/assets/logo-main.png" alt="" />
+      </div>
+      {{!-- Name section  --}}
+      <div class="sidebar-name">
+        <p>Welcome</p>
+        <h2>{{user.username}}</h2>
+      </div>
+      <ul class="nav-ul">
+        <li class="nav-li">
+          <a href="/" class="nav-item">
+            <i class="fa-solid fa-table-columns icon"></i>
+            <span>Profile</span>
+          </a>
+        </li>
+        <li class="nav-li">
+          <a href="/" class="nav-item">
+            <i class="fa-solid fa-table-columns icon"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-li">
+          <a href="/transactions" class="nav-item">
+            <i class="fa-solid fa-arrow-right-arrow-left icon"></i>
+            <span>Transactions</span>
+          </a>
+        </li>
+        <li class="nav-li">
+          <a href="/spending-by-category" class="nav-item">
+            <i class="fa-solid fa-chart-pie icon"></i>
+            <span>Spending by Category</span>
+          </a>
+        </li>
+        <li class="nav-li">
+          <a href="/spending-by-date" class="nav-item">
+            <i class="fa-solid fa-chart-line icon"></i>
+            <span>Spending by Date</span>
+          </a>
+        </li>
+      </ul>
+      <div class="logout-container" id="logout">
+        <a href="" class="nav-item">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          <span>Logout</span>
         </a>
-      </li>
-      <li class="nav-li">
-        <a href="/" class="nav-item">
-          <i class="fa-solid fa-table-columns icon"></i>
-          <span>Dashboard</span>
-        </a>
-      </li>
-      <li class="nav-li">
-        <a href="/transactions" class="nav-item">
-          <i class="fa-solid fa-arrow-right-arrow-left icon"></i>
-          <span>Transactions</span>
-        </a>
-      </li>
-      <li class="nav-li">
-        <a href="/spending-by-category" class="nav-item">
-          <i class="fa-solid fa-chart-pie icon"></i>
-          <span>Spending by Category</span>
-        </a>
-      </li>
-      <li class="nav-li">
-        <a href="/spending-by-date" class="nav-item">
-          <i class="fa-solid fa-chart-line icon"></i>
-          <span>Spending by Date</span>
-        </a>
-      </li>
-    </ul>
-    <div class="logout-container" id="logout">
-      <a href="" class="nav-item">
-        <i class="fa-solid fa-arrow-right-to-bracket"></i>
-        <span>Logout</span>
-      </a>
-    </div>
-  </nav>
-</aside>
+      </div>
+    </nav>
+  </aside>
 
 
-{{!-- Add Expense Button --}}
-<section class="section center-section">
-  <a href="/transactions" class="btn">Add Expense</a>
-</section>
+  {{!-- Add Expense Button --}}
+  <div class="main-content">
+    <section class="section center-section">
+      <a href="/transactions" class="btn">Add Expense</a>
+    </section>
 
-{{!-- ChartJS charts - Total Expense By Month / Top Spending Categories --}}
-<section class="section expenses-section">
-  <div class="total-expenses" style="height: 350px">
-    <h2 class="card-title">Total Expenses By Month</h2>
-    <canvas id="totalExpenseChart"></canvas>
+    {{!-- ChartJS charts - Total Expense By Month / Top Spending Categories --}}
+    <section class="section expenses-section">
+      <div class="total-expenses" style="height: 350px">
+        <h2 class="card-title">Total Expenses By Month</h2>
+        <canvas id="totalExpenseChart"></canvas>
+      </div>
+      <div class="category-expenses" style="height: 350px">
+        <h2 class="card-title">Top Spending Categories</h2>
+        <canvas id="categoryExpenseChart"></canvas>
+      </div>
+    </section>
+
+    {{!-- Transaction Table --}}
+    <section class="section transaction-section">
+      <h2 class="section-title">Transaction Activity</h2>
+      <table class="table table-striped" id="transactionTable">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Amount</th>
+            <th scope="col">Category</th>
+            <th scope="col">Payee</th>
+            <th scope="col">Dates</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each transactions as |transaction|}}
+          {{> transaction-details}}
+          {{/each}}
+        </tbody>
+      </table>
+    </section>
   </div>
-  <div class="category-expenses" style="height: 350px">
-    <h2 class="card-title">Top Spending Categories</h2>
-    <canvas id="categoryExpenseChart"></canvas>
-  </div>
-</section>
-
-{{!-- Transaction Table --}}
-<section class="section transaction-section">
-  <h2 class="section-title">Transaction Activity</h2>
-  <table class="table table-striped" id="transactionTable">
-    <thead>
-      <tr>
-        <th scope="col"></th>
-        <th scope="col">Amount</th>
-        <th scope="col">Category</th>
-        <th scope="col">Payee</th>
-        <th scope="col">Dates</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each transactions as |transaction|}}
-      {{> transaction-details}}
-      {{/each}}
-    </tbody>
-  </table>
-</section>
+</main>
 
 <script src="/js/transaction.js"></script>
 <script src="/js/dashboard.js"></script>
