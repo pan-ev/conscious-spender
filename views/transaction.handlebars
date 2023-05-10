@@ -1,9 +1,14 @@
 {{!-- Sidebar --}}
+<main class="main-wrapper">
 <aside class="sidebar">
   <nav class="nav">
     <div>
       <img src="/assets/logo-main.png" alt="" />
     </div>
+    <div class="sidebar-name">
+        <p>Welcome</p>
+        <h2>{{user.username}}</h2>
+      </div>
     <ul class="nav-ul">
       <li class="nav-li">
         <a href="/" class="nav-item">
@@ -45,6 +50,8 @@
   </nav>
 </aside>
 
+  <div class="main-content">
+
 {{!-- Add Expense Form --}}
 <section class="section add-expense-section">
   <h2>Add an Expense</h2>
@@ -78,6 +85,8 @@
     <button type="submit" class="btn submit-btn btn-filled" id="createTransactionBtn">Submit</button>
   </form>
 </section>
+  </div>
+</main>
 
 <script src="/js/transaction.js"></script>
 <script src="/js/logout.js"></script>
