@@ -10,9 +10,12 @@ router.get("/", withAuth, async (req, res) => {
       where: { user_id: req.session.user_id },
       order: [['transaction_date', 'DESC']],
     });
+    // also fetch the user details to show the user's name on the dashboard {EC}
+    const user = await User.findOne({ where: { id: req.session.user_id } });
     const transactions = dbTransactionsData.map((transactions) =>
       transactions.get({ plain: true })
     );
+    //>
     res.render("homepage" ,{transactions});
   } catch (err) {
     res.status(500).json(err);
@@ -29,6 +32,17 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/transactions", withAuth, async (req, res) => {
+  // before rendering transactions, fetch the user from the DB 
+  // using the user_id in the session {EC}
+  let user = {};
+  try {
+    user = await User.findOne({ where: { id: req.session.user_id } });
+    user = user.dataValues;
+  } catch (error) {
+    console.log("error while fetching user");
+  }
+  //>
+  // send along user with the response {EC}
   res.render("transaction", {
     logged_in: req.session.loggedIn,
   });
