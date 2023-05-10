@@ -18,16 +18,17 @@ Spendr can help you stay on track. You can set a target amount for your savings.
 
 ## Technologies
 <hr>
- Handlebars.js
- CSS
- Javascript
- Express.js
- Chart.js
- MYSQL
- NODE.js
- Bootsrap
- Google fonts
- Font Awesome
+
+- Handlebars.js
+- CSS
+- Javascript
+- Express.js
+- Chart.js
+- MYSQL
+- NODE.js
+- Bootsrap
+- Google fonts
+- Font Awesome
 
 
  ## Preview
@@ -37,9 +38,6 @@ The following video shows the web application appearance and functionality once 
 
 [![walkthrough image](./public/assets/image1%20copy.png)](https://murmuring-everglades-61234.herokuapp.com/login)
  
- 
-  <!-- ![image](https://user-images.githubusercontent.com/121327572/236959953-b8c109a2-dd40-4683-b878-0b26b5a3f505.png)
-![image](https://user-images.githubusercontent.com/121327572/236960135-ba1f71e4-0563-47c8-8b53-8a20eea2f671.png) -->
 
 
 ## Links
