@@ -36,7 +36,7 @@ Spendr can help you stay on track. You can set a target amount for your savings.
 
 The following video shows the web application appearance and functionality once deployed:
 
-[![walkthrough image](./public/assets/image1%20copy.png)](https://murmuring-everglades-61234.herokuapp.com/login)
+[![walkthrough image](/public/assets/image1%20copy.png)](https://drive.google.com/file/d/1zB-W-oyhZDqz28b88QbxD8cyC7K4jp4H/view)
  
 
 
