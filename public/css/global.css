@@ -38,17 +38,27 @@
      flex: 1;
      padding-left: 30px;
    }
-   
-   .sidebar {
-     max-width: 250px;
-     width: 100%;
-     height: 100vh;
-     position: fixed;
-     left: 0;
-     top: 0;
-     padding: 10px;
-     box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
-   }
+/*display flex the `main` element which is wrapping the sidebar and the main content*/
+  .main-wrapper {
+  display: flex;
+}
+
+  .main-content {
+  padding-left: 20px;
+  width: 100%;
+}
+
+/* Make position sticky instead of fixed */
+.sidebar {
+  max-width: 250px;
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+}
 
    .name {
      margin-top: 20px;
@@ -284,3 +294,18 @@
    #totalExpenseChart {
      margin-top: 50px;
    }
+
+   /* styles for the name section in sidebar*/
+.sidebar-name {
+  padding-left: 10px;
+  margin: 10px 0;
+}
+
+.sidebar-name h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.sidebar-name p {
+  margin: 0;
+}
